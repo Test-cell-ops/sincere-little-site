@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Check, Pause, Play, RotateCcw } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 
 import songAsset from "@/assets/apology-song.m4a.asset.json";
 import { Button } from "@/components/ui/button";
@@ -201,7 +201,7 @@ function Index() {
             {answer === "yes" && (
               <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-16 mx-auto h-72 max-w-2xl overflow-hidden">
                 {Array.from({ length: 18 }).map((_, index) => (
-                  <i key={index} className="confetti-piece absolute top-0 h-2 w-1.5 bg-primary" style={{ left: `${5 + ((index * 37) % 90)}%`, animationDelay: `${(index % 6) * 80}ms`, "--drift": `${(index % 2 ? 1 : -1) * (18 + index * 2)}px` } as React.CSSProperties} />
+                  <i key={index} className="confetti-piece absolute top-0 h-2 w-1.5 bg-primary" style={{ left: `${5 + ((index * 37) % 90)}%`, animationDelay: `${(index % 6) * 80}ms`, "--drift": `${(index % 2 ? 1 : -1) * (18 + index * 2)}px` } as CSSProperties} />
                 ))}
               </div>
             )}
