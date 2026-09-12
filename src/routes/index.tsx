@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Check, Pause, Play, RotateCcw } from "lucide-react";
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 
-import songAsset from "@/assets/apology-song.m4a.asset.json";
+import songAsset from "@/assets/apology-song.mp3.asset.json";
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/")({
